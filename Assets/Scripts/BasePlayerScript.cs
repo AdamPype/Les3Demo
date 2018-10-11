@@ -19,12 +19,14 @@ public class BasePlayerScript : MonoBehaviour {
 
     private Transform _absoluteTransform;
     private CharacterController _char;
+    private Animator _anim;
 
     void Start ()
         {
         //attach components
         _char = GetComponent<CharacterController>();
         _absoluteTransform = Camera.main.transform;
+        _anim = transform.GetChild(0).GetComponent<Animator>();
 
         //dependency error
         #if DEBUG
@@ -40,6 +42,7 @@ public class BasePlayerScript : MonoBehaviour {
             {
             _jump = true;
             }
+
         }
 
     void FixedUpdate ()
@@ -50,6 +53,8 @@ public class BasePlayerScript : MonoBehaviour {
         ApplyDragOnGround();
         ApplyJump();
         LimitXZVelocity();
+
+        _anim.SetFloat("VerticalVelocity", Vector3.Scale(_velocity, new Vector3(1, 0, 1)).magnitude);
 
         DoMovement();
         }
