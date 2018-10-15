@@ -56,7 +56,8 @@ public class BasePlayerScript : MonoBehaviour {
 
         Vector3 XZvel = Vector3.Scale(_velocity, new Vector3(1, 0, 1));
         Vector3 localVelXZ = gameObject.transform.InverseTransformDirection(XZvel);
-        _anim.SetFloat("VerticalVelocity", localVelXZ.z);
+        _anim.SetFloat("VerticalVelocity", (localVelXZ.z * (_drag / 2)) / _maximumXZVelocity);
+
 
         DoMovement();
         }
