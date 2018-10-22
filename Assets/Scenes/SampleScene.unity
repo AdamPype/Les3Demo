@@ -414,7 +414,7 @@ GameObject:
   m_Layer: 0
   m_Name: AimTarget
   m_TagString: Untagged
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -518,26 +518,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1972142255 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100004, guid: ce442f7320a24864f907c7fdbc151677,
-    type: 3}
-  m_PrefabInternal: {fileID: 537640223}
---- !u!114 &1972142257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1972142255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cbc6d236ede693499493fb82fd673fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 2012888852}
-  _timeStep: 0.1
-  _damp: 0.2
-  _freq: 4
 --- !u!1 &2012888849
 GameObject:
   m_ObjectHideFlags: 0
